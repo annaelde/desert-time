@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Contact Us | Desert Time Studios</title>
+		<meta charset="utf-8">
+		<meta name="description" content="Have questions about Desert Time Studios or need support for one of our games? Contact us here!">
+		<meta name="author" content="Anna Elde">
+		<meta name="robots" content="index">
+		<meta name="dcterms.rightsHolder" content="Desert Time Studios">
+		<meta name="viewport" content="width=device-width" />
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div id="back"><a href="/projects">↩ back to projects</a></div>
+		<div id="wrapper">
+			<header>
+				<img src="images/desert-time-logo.png" alt="Desert Time Studios" height="200" width="900" id="full-logo">
+				<img src="images/desert-time-logo-s.png" alt="Desert Time Studios" height="200" width="400" id="mobile-logo">
+				<ul>
+					<li><a href="http://www.facebook.com/"><img src="images/facebook.svg" alt="Find us on Facebook." width="50" height="50"></a>
+					<li><a href="http://www.reddit.com/"><img src="images/reddit.svg" alt="Find us on Reddit." width="50" height="50"></a>
+					<li><a href="http://www.twitter.com/"><img src="images/twitter.svg" alt="Follow us on Twitter." width="50" height="50"></a>
+				</ul>
+			</header>
+			<nav>
+				<ul>
+					<li><a href="index.htm">Home</a>
+					<li><a href="about-us.htm">About Us</a>
+					<li><a href="games.htm">Games</a>
+					<li><a href="careers.htm">Careers</a>
+					<li><a href="contact-us.htm">Contact Us</a>
+				</ul>
+			</nav>	
+			<section>
+				<h1 class="h-line"><span>Contact Us</span></h1>
+				<p class="full">Have a comment or question about the studio or a game we have made? We'd love to hear it! Fill out the form below or contact us via email, phone, or mail. For game support, press information, or information on careers at Desert Time Studios, please use the form below.</p>
+				<div id="contact">
+					<div class="box left">
+						<h2>Send a Comment</h2>
+						<form id="contact-us" method="post" action="comment-submit.php">
+							<label for="name">Name</label> 
+							<input type="text" name="contact-name" id="name" value="" tabindex="1" size="40" maxlength="40" required>
+							<label for="email" class="top">Email</label>
+							<input type="email" name="contact-email" id="email" value="" tabindex="2" size="40" maxlength="40" required>
+							<label>
+								<input type="radio" name="comment-type" value="support" tabindex="3" checked>
+								Game support
+							</label>
+							<label>
+								<input type="radio" name="comment-type" value="press" tabindex="4" >
+								Press information
+							</label>
+							<label>
+								<input type="radio" name="comment-type" value="careers" tabindex="5" >
+								Careers
+							</label>
+							<label>
+								<input type="radio" name="comment-type" value="other" tabindex="6" >
+								Other
+							</label>
+							<label for="comment">Comments</label>
+							<textarea rows="8" cols="45" name="comment" id="comment" tabindex="7" maxlength="400" required></textarea>
+							<input type="hidden" id="recipient" name="recipient" value="">
+							<input type="hidden" id="redirect" name="redirect" value="confirmation.htm">
+							<input type="hidden" id="subject" name="subject" value="Comment Form | Desert Time Studios">
+							<input type="submit" tabindex="8" value="Submit" id="submit"/>
+						</form>
+					</div>
+					<div class="right">
+						<figure>
+							<img src="images/our-offices.jpg" alt="The small office building where Desert Time Studios is located." height="300" width="300" class="center">
+							<figcaption class="center">Our building in Orlando.</figcaption>
+						</figure>
+						<div class="box">
+							<h2>Contact Information</h2>
+							<h3>Address</h3>
+							<p><a href="https://goo.gl/maps/J8jJnV1bjSt">2000 Sun Drive<br>Orlando, Florida 32814</a></p>
+							<h3>Phone</h3>
+							<p><a href="tel:5555555555">(555) 555 5555</a></p>
+							<h3>Email</h3>
+							<p><a href="mailto:contact@deserttimestudios.com">contact@deserttimestudios.com</a></p>
+						</div>
+					</div>
+				</div>
+				<div style="clear:both;"></div>
+			</section>
+			<footer>
+				<div class="column left">
+					<ul>
+						<li><a href="index.htm">Home</a>
+						<li><a href="about-us.htm">About Us</a>
+						<li><a href="games.htm">Games</a>
+						<li><a href="careers.htm">Careers</a>
+						<li><a href="contact-us.htm">Contact Us</a>
+					</ul>
+				</div>
+				<div class="column center">&copy; 2016 Desert Time Studios.</div>
+				<div class="column right">
+					<a href="http://www.facebook.com/"><img src="images/facebook.svg" alt="Find us on Facebook." width="30" height="30" class="social-icon"></a>
+					<a href="http://www.reddit.com/"><img src="images/reddit.svg" alt="Find us on Reddit." width="30" height="30" class="social-icon"></a>
+					<a href="http://www.twitter.com/"><img src="images/twitter.svg" alt="Follow us on Twitter." width="30" height="30" class="social-icon"></a>
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>
