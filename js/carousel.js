@@ -1,35 +1,35 @@
-// Image carousel
-// Source: https://github.com/codepo8/simple-carousel
+// Anna Elde
+// August 1, 2017
+// This script creates a slideshow with controls on a page
 
-carousel = (function(){
-  var box = document.querySelector('.carouselbox');
-  var next = box.querySelector('.next');
-  var prev = box.querySelector('.prev');
-  var items = box.querySelectorAll('.content li');
-  var counter = 0;
-  var amount = items.length;
-  var current = items[0];
-  box.classList.add('active');
-  
-  function navigate(direction) {
-    current.classList.remove('current');
-    counter = counter + direction;
-    if (direction === -1 && 
-        counter < 0) { 
-      counter = amount - 1; 
+(function() {
+    // Get the required elements
+    var slideshow = document.getElementById('slideshow')
+    var images = slideshow.querySelectorAll('.images img')
+    var currentImage = 0
+
+    // Assign event handlers
+    slideshow.getElementsByClassName('next')[0].addEventListener('click', function() {
+        images[currentImage].style.display = 'None'
+        if (currentImage < images.length - 1) currentImage++
+        else currentImage = 0
+        images[currentImage].style.display = 'block'
+    })
+
+    slideshow.getElementsByClassName('prev')[0].addEventListener('click', function() {
+        images[currentImage].style.display = 'none'
+        if (currentImage > 0) currentImage--
+        else currentImage = images.length - 1
+        images[currentImage].style.display = 'block'
+    })
+
+    // Initialize the slideshow
+    initSlides()
+    function initSlides() {
+        for (var i = 0; i < images.length; i++) {
+            images[i].style.display = 'none'
+        }
+
+        images[currentImage].style.display = 'block'
     }
-    if (direction === 1 && 
-        !items[counter]) { 
-      counter = 0;
-    }
-    current = items[counter];
-    current.classList.add('current');
-  }
-  next.addEventListener('click', function(ev) {
-    navigate(1);
-  });
-  prev.addEventListener('click', function(ev) {
-    navigate(-1);
-  });
-  navigate(0);
 })();
